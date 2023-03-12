@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Task</title>
+    <style>
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+        }
+
+        button {
+            border-radius: 10px;
+            margin: 20px;
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .container {
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            border: 2px solid blue;
+            background-color: lightgray;
+            box-shadow: 2px 4px;
+            font-size: 22px;
+            color: brown;
+            text-align: center;
+            padding: 30px;
+            justify-content: center;
+            align-items: center;
+            width: 550px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Prompt ile girilen sayıları karşılaştırma</h1>
+
+        <p>Butona basarak rastgele bir sayı giriniz</p>
+
+        <button onclick="rastgeleSayi()">Sayı Gir</button>
+
+    </div>
+
+    <script>
+        function rastgeleSayi() {
+            let text;
+            let girilenSayi1 = parseInt(prompt("Rastgele bir sayı giriniz"));
+            let girilenSayi2 = parseInt(prompt("Rastgele bir sayı daha giriniz"));
+            let girilenSayi3 = parseInt(prompt("Rastgele bir sayı daha giriniz"));
+
+            if (girilenSayi1 > girilenSayi2 && girilenSayi1 > girilenSayi3)
+                console.log(girilenSayi1);
+
+            else if (girilenSayi2 > girilenSayi1 && girilenSayi2 > girilenSayi3)
+                console.log(girilenSayi2);
+
+            else if (girilenSayi3 > girilenSayi1 && girilenSayi3 > girilenSayi2)
+                console.log(girilenSayi3);
+        }
+    </script>
+
+</body>
+
+</html>
